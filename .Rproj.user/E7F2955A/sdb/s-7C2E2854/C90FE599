@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1490477793950.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C90FE599",
+    "lastKnownWriteTime" : 30118312141586551,
+    "last_content_update" : 1490477793950,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "517C6663",
+        "caption" : "chickwts",
+        "contentUrl" : "grid_resource/gridviewer.html?env=package%3Adatasets&obj=chickwts&cache_key=517C6663",
+        "displayedObservations" : 71,
+        "environment" : "package:datasets",
+        "object" : "chickwts",
+        "preview" : 0,
+        "totalObservations" : 71,
+        "variables" : 2
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

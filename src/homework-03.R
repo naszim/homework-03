@@ -38,3 +38,22 @@ print(l3)
 is.vector(l3)
 #FELADAT VÉGE-------------------------------------------------------------------
 
+#III/1. Hívd be a chickwts datasetet, amit az R alapból tartalmaz.
+chickwts
+View(chickwts)
+
+#III/2. Nézd meg, mennyi az átlagsúlya a különbözőképp táplált csirkéknek! 
+#Használd az aggregate függvényt!
+wts_mean <- aggregate(chickwts$weight~chickwts$feed, chickwts, 
+                                 FUN=mean, simplify = T)
+View(wts_mean)
+
+
+#III/3. Az előbb kapott aggregált data frame-et rendezd az átlagsúly szerint 
+#csökkenő sorrendbe!
+is.data.frame(wts_mean)
+stulevel <- stulevel[order(stulevel$ability) , ]
+wts_mean_ordered <- wts_mean[order(wts_mean$`chickwts$weight`, decreasing = T), 
+                             ]
+View(wts_mean_ordered)
+#FELADAT VÉGE-------------------------------------------------------------------
