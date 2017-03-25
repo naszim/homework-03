@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "######################\n# Házi feladat 3.    #\n# Programozás I.     #\n# 2016/17. II. félév #\n# Nagy Szimonetta    #\n# 2017-03-25         #\n######################\n\n\n",
+    "created" : 1490469403164.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1492040264",
+    "id" : "36CC3203",
+    "lastKnownWriteTime" : 1490474555,
+    "last_content_update" : 1490474555362,
+    "path" : "D:/Rprogramozás/homework-03/src/homework-03.R",
+    "project_path" : "src/homework-03.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
