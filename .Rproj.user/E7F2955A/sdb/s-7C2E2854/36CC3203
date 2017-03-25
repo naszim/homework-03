@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "######################\n# Házi feladat 3.    #\n# Programozás I.     #\n# 2016/17. II. félév #\n# Nagy Szimonetta    #\n# 2017-03-25         #\n######################\n\n\n",
+    "contents" : "######################\n# Házi feladat 3.    #\n# Programozás I.     #\n# 2016/17. II. félév #\n# Nagy Szimonetta    #\n# 2017-03-25         #\n######################\n\n#II/1. Készíts egy listát, ami 5 vektort tartalmaz. Mindegyik vektor hossza \n#legyen egy véletlenszerű 10 és 20 közötti szám. A vektorok (1,2) intervallumon \n#egyenletes eloszlásból származzanak.\nl1 <- list(NULL)\nfor (i in 1:5) {\n  l1[i] <- list(c(runif(sample(10:20, 1), 1, 2))) \n}\nprint(l1)\nis.list(l1)\n\n#II/2. Nézd meg for ciklussal, hogy az előbb létrehozott listának milyen \n#hosszúak az elemei! A végeredmény legyen egy vektor.\nv1 <- vector(\"numeric\", 5)\nfor (i in 1:5) {\n  v1[i] <- c(length(l1[[i]]))\n}\nprint(v1)\nis.vector(v1)\n\n#II/3. Nézd meg az apply függvénycsalád egy tagjával, hogy a listának milyen \n#hosszúak az elemei! A végeredmény legyen egy lista.\nl2 <- lapply(l1, FUN = length)\nprint(l2)\nis.list(l2)\n\n#II/4. Nézd meg az apply függvénycsalád egy tagjával, hogy a listának milyen \n#hosszúak az elemei! A végeredmény legyen egy vektor.\nl3 <- sapply(l1, FUN = length)\nprint(l3)\nis.vector(l3)\n#FELADAT VÉGE-------------------------------------------------------------------\n\n",
     "created" : 1490469403164.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1492040264",
+    "hash" : "1856612283",
     "id" : "36CC3203",
-    "lastKnownWriteTime" : 1490474555,
-    "last_content_update" : 1490474555362,
+    "lastKnownWriteTime" : 1490477670,
+    "last_content_update" : 1490477670482,
     "path" : "D:/Rprogramozás/homework-03/src/homework-03.R",
     "project_path" : "src/homework-03.R",
     "properties" : {
