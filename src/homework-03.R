@@ -52,7 +52,6 @@ View(wts_mean)
 #III/3. Az előbb kapott aggregált data frame-et rendezd az átlagsúly szerint 
 #csökkenő sorrendbe!
 is.data.frame(wts_mean)
-stulevel <- stulevel[order(stulevel$ability) , ]
 wts_mean_ordered <- wts_mean[order(wts_mean$`chickwts$weight`, decreasing = T), 
                              ]
 View(wts_mean_ordered)
@@ -72,13 +71,13 @@ v2 <- vector("numeric", 50)
 for (i in 1:50) {
   v2[i] <- sd(m1[i, ])
 }
-v2
+print(v2)
 is.vector(v2)
 
 #IV/3. Számold ki az apply függvénycsalád egy tagjával minden sor szórását! 
 #A végeredmény legyen egy vektor.
 v3 <- apply(m1, 1, sd)
-v3
+print(v3)
 is.vector(v3)
 
 #IV/4. Normalizáld a mátrix értékeit -1-től 1-ig tartó intervallumra és nézd 
@@ -93,5 +92,42 @@ for (i in 1:50) {
 }
 View(m2)
 v4 <- apply(m2, 1, mean)
-v4
+print(v4)
+#FELADAT VÉGE-------------------------------------------------------------------
+
+#eddig létrehozott objektumok törlése a következő feladat előtt
+rm(m1, m2, wts_mean, wts_mean_ordered, i, l1, l2, l3, v1, v2, v3, v4)
+
+#V/1. Hívd be a előző házikban is használt fivethirtyeight package-et és olvasd 
+#be a comic_characters datasetet!
+library(fivethirtyeight)
+comic_characters
+View(comic_characters)
+
+#V/2. Alakítsd át a name nevű oszlopot úgy, hogy minden karakternek csak az 
+#elsődleges neve maradjon ott mindenféle zárójeles rész nélkül. Ne legyen a 
+#megoldásban for ciklus.
+comic_characters$name <- trimws(gsub("\\(.*", "\\1", comic_characters$name), "r"
+                                )
+View(comic_characters)
+
+#V/3. Írj egy függvény get_gender néven, aminek az a célja, hogy egy karakter 
+#nevének megadásakor visszaadja a karakter genderét. A karakter genderét úgy 
+#add vissza, hogy ha a gsm oszlopban NA érték van, akkor a sex oszlop tartalmát 
+#írja ki a függvény, viszont ha a gsm oszlop értéke nem NA, akkor a gsm oszlop 
+#tartalmát írja ki. A gender kiírásakor vágd le a " Characters" részt. Minden 
+#egyező név esetén nézze meg a gendert és vektorként térjen vissza az 
+#értékeikkel! Ne legyen a függvényben for ciklus!
+source("src/homework-03-functions.R")
+
+#V/4. Nézd meg az előzőleg írt get_gender függvénnyel, hogy milyen genderű Thor,
+#Katherine Pryde és Loki Laufeyson! Thornál és Lokinál egy vektort kell kapnod.
+thor_gender <- get_gender("Thor")
+is.vector(thor_gender)
+loki_gender <- get_gender("Loki Laufeyson")
+is.vector(loki_gender)
+get_gender("Katherine Pryde")
+
+#objektumok törlése
+rm(loki_gender, thor_gender, get_gender)
 #FELADAT VÉGE-------------------------------------------------------------------
