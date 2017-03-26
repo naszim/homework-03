@@ -57,3 +57,41 @@ wts_mean_ordered <- wts_mean[order(wts_mean$`chickwts$weight`, decreasing = T),
                              ]
 View(wts_mean_ordered)
 #FELADAT VÉGE-------------------------------------------------------------------
+
+#IV/1. Hozz létre egy 50 soros, 10 oszlopos mátrixot, aminek az értékei normális 
+#eloszlásból származnak. Minden sor szórása legyen egyenlő a sor számával.
+m1 <- matrix(data = NA, 50, 10)
+for (i in 1:50) {
+  m1[i, ] <- c(rnorm(n = 10, mean = 0, sd = i))
+}
+View(m1)
+
+#IV/2. Számold ki for ciklussal minden sor szórását! A végeredmény legyen egy 
+#vektor.
+v2 <- vector("numeric", 50)
+for (i in 1:50) {
+  v2[i] <- sd(m1[i, ])
+}
+v2
+is.vector(v2)
+
+#IV/3. Számold ki az apply függvénycsalád egy tagjával minden sor szórását! 
+#A végeredmény legyen egy vektor.
+v3 <- apply(m1, 1, sd)
+v3
+is.vector(v3)
+
+#IV/4. Normalizáld a mátrix értékeit -1-től 1-ig tartó intervallumra és nézd 
+#meg a sorok átlagát!
+m2 <- matrix(NA, 50, 10)
+for (i in 1:50) {
+  j <- c(1:10)
+  average <- apply(m1, 1, mean)
+  deviation <- apply(m1, 1, sd)
+  m2[i, j] <- (m1[i, j]-average[i])/deviation[i]
+  rm(average, deviation, j)
+}
+View(m2)
+v4 <- apply(m2, 1, mean)
+v4
+#FELADAT VÉGE-------------------------------------------------------------------

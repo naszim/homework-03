@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "",
+    "contents" : "\n",
     "created" : 1490474416328.000,
-    "dirty" : false,
+    "dirty" : true,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "852952723",
     "id" : "B7C4AB1B",
     "lastKnownWriteTime" : 1490474429,
-    "last_content_update" : 1490474429035,
+    "last_content_update" : 1490524455620,
     "path" : "D:/Rprogramozás/homework-03/src/homework-03-functions.R",
     "project_path" : "src/homework-03-functions.R",
     "properties" : {
